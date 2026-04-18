@@ -1,31 +1,46 @@
-# Inventory Management System
+# 🚀 Inventory Management System
 
-A backend inventory management application built with Spring Boot, PostgreSQL, and Docker.
+A backend inventory management system built using **Spring Boot, PostgreSQL, and Docker**, designed to simulate real-world backend architecture and deployment.
 
-## Tech Stack
-- Java
-- Spring Boot
-- Spring Data JPA
-- PostgreSQL
-- Docker
+---
 
-## Features
-- Create product
-- Get all products
-- Get product by id
-- Update product
-- Delete product
-- Persistent storage using PostgreSQL
-- Dockerized backend setup
+## 🛠️ Tech Stack
 
-## API Endpoints
-- `GET /api/products`
-- `GET /api/products/{id}`
-- `POST /api/products`
-- `PUT /api/products/{id}`
-- `DELETE /api/products/{id}`
+* Java 17
+* Spring Boot
+* Spring Data JPA
+* PostgreSQL
+* Docker & Docker Compose
+* REST APIs
+* Maven
 
-## Example Request
+---
+
+## ✨ Features
+
+* Create, update, delete, and retrieve products
+* RESTful API design
+* Layered architecture (Controller, Service, Repository)
+* PostgreSQL integration using JPA
+* Dockerized backend application
+* Containerized database using Docker Compose
+
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint           | Description       |
+| ------ | ------------------ | ----------------- |
+| GET    | /api/products      | Get all products  |
+| GET    | /api/products/{id} | Get product by ID |
+| POST   | /api/products      | Create product    |
+| PUT    | /api/products/{id} | Update product    |
+| DELETE | /api/products/{id} | Delete product    |
+
+---
+
+## 🧪 Sample Request
+
 ```json
 {
   "name": "Laptop",
@@ -34,89 +49,49 @@ A backend inventory management application built with Spring Boot, PostgreSQL, a
   "price": 899.99
 }
 ```
-## Run Locally
-
-### Prerequisites
-- Java 17+
-- Maven
-- PostgreSQL
-
-### Steps
-
-1. Clone the repository
-```bash
-git clone https://github.com/YOUR_USERNAME/inventory-management-system.git
-cd inventory-management-system
-```
-2. Configure database in application.properties
-```
-spring.datasource.url=jdbc:postgresql://localhost:5432/inventorydb1
-spring.datasource.username=postgres
-spring.datasource.password=your_passwordagsl
-
-```
-3. Run the application
-```
-mvn spring-boot:run
-```
-
-4. Access API
-```
-http://localhost:8080/api/products
-```
 
 ---
 
-## ⚙️ Build JAR
-
-```markdown
-## Build JAR
-
-To package the application into a JAR file:
-
-```bash
-mvn clean package
-```
-The JAR will be generated in:
-
-```agsl
-target/inventory-management-0.0.1-SNAPSHOT.jar
-```
-
----
-
-## 🐳 Run with Docker
-
-```markdown
-## Run with Docker
-
-### Build Docker Image
-```bash
-docker build -t inventory-management-app .
-
-```
-Run Container
-```agsl
-docker run -p 8081:8080 inventory-management-app
-```
-Access API:
-```agsl
-http://localhost:8081/api/products
-```
-
----
-
-## 🐳 Docker Compose 
-
-```markdown
-## Run with Docker Compose
-
-Run both backend and PostgreSQL:
+## 🐳 Run with Docker (Recommended)
 
 ```bash
 docker-compose up --build
 ```
+
 Access API:
-```agsl
 http://localhost:8081/api/products
+
+---
+
+## ⚙️ Run Locally
+
+```bash
+mvn spring-boot:run
 ```
+
+---
+
+## 📦 Build JAR
+
+```bash
+mvn clean package
+```
+
+---
+
+## 🔮 Future Improvements
+
+* Low stock alert system
+* Search and filtering APIs
+* Pagination
+* Authentication & authorization
+* Cloud deployment (GCP / AWS)
+
+---
+
+## 💡 Key Learnings
+
+* Docker container networking
+* Backend architecture design
+* Database integration with JPA
+* Environment-based configuration
