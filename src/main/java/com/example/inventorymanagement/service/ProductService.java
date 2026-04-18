@@ -46,4 +46,10 @@ public class ProductService {
 
         productRepository.delete(existingProduct);
     }
+    public List<Product> getLowStockProducts() {
+        return productRepository.findAll()
+                .stream()
+                .filter(p -> p.getQuantity() < 5)
+                .toList();
+    }
 }
