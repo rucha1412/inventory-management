@@ -106,7 +106,7 @@ http://localhost:8081/api/products
 
 ---
 
-## 🐳 Docker Compose (BEST PART 🔥)
+## 🐳 Docker Compose 
 
 ```markdown
 ## Run with Docker Compose
