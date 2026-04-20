@@ -1,5 +1,18 @@
+# Java
 target/
+*.class
+
+# IDE
 .idea/
 *.iml
-.DS_Store
+
+# Logs
 *.log
+
+# Env files
+.env
+.env.*
+cloudrun-env.yaml
+
+# OS
+.DS_Store
